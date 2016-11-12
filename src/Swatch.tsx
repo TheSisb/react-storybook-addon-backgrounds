@@ -41,7 +41,7 @@ export interface BackgroundItemProps {
 export default ({ name, value, setBackground }: BackgroundItemProps) => (
   <div
     style={assign({}, style.swatches, style.listStyle, style.hard)}
-    onClick={() => setBackground(value)}
+    onClick={() => setBackground(name, value)}
   >
     <div
       style={assign({}, style.swatch, {
