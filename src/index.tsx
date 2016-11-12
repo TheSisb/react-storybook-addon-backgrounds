@@ -53,12 +53,12 @@ export class BackgroundDecorator extends React.Component<any, any> {
     this.channel.emit("background-unset");
   }
 
-  private setBackground = background => this.setState({ background })
+  private setBackground = ({name, background}) => this.setState({name, background});
 
   render() {
     const styles = style.wrapper;
     styles.background = this.state.background;
-    return <div style={assign({}, styles)}>{this.story}</div>;
+    return <div className={this.state.name} style={assign({}, styles)}>{this.story}</div>;
   }
 }
 
