@@ -85,7 +85,7 @@ export default class BackgroundPanel extends React.Component<BackgroundPanelProp
 
     this.props.channel.on("background-unset", backgrounds => {
       this.setState({ backgrounds: [] });
-      this.props.api.setQueryParams({ background: null });
+      this.props.api.setQueryParams({backgroundName: null, backgroundValue: null});
     });
   }
 
@@ -93,7 +93,7 @@ export default class BackgroundPanel extends React.Component<BackgroundPanelProp
 
   private setBackgroundFromSwatch = (name, background) => {
     this.setBackgroundInPreview(name, background);
-    this.props.api.setQueryParams({ background });
+    this.props.api.setQueryParams({backgroundName: name, backgroundValue: background});
   }
 
   render () {
