@@ -22,7 +22,7 @@ export class BackgroundDecorator extends React.Component<any, any> {
   private channel: NodeJS.EventEmitter;
   private story: any;
 
-  public state = { background: "transparent" };
+  public state = {name: '', background: "transparent"};
 
   constructor(props) {
     super(props);
