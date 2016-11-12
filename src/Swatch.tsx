@@ -35,7 +35,7 @@ const style = {
 export interface BackgroundItemProps {
   value: string;
   name?: string;
-  setBackground(value: string): void;
+  setBackground(name: string, value: string): void;
 }
 
 export default ({ name, value, setBackground }: BackgroundItemProps) => (
