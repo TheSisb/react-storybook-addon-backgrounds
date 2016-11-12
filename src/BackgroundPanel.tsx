@@ -88,10 +88,10 @@ export default class BackgroundPanel extends React.Component<BackgroundPanelProp
     });
   }
 
-  private setBackgroundInPreview = (background) => this.props.channel.emit("background", background);
+  private setBackgroundInPreview = (name, background) => this.props.channel.emit("background", {name, background});
 
-  private setBackgroundFromSwatch = (background) => {
-    this.setBackgroundInPreview(background);
+  private setBackgroundFromSwatch = (name, background) => {
+    this.setBackgroundInPreview(name, background);
     this.props.api.setQueryParams({ background });
   }
 
